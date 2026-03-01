@@ -1,9 +1,7 @@
-name: Java CI with Maven
+name: Java CI/CD with Maven
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
     branches: [ main ]
 
 jobs:
@@ -22,5 +20,14 @@ jobs:
         java-version: '17'
         cache: maven
 
-    - name: Build with Maven
+    - name: Build and Test
       run: mvn clean verify
+
+    - name: Package application
+      run: mvn package -DskipTests
+
+    - name: Upload JAR artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: fizzbuzz-jar
+        path: target/*.jar
