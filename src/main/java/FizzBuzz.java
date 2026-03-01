@@ -1,14 +1,19 @@
 public class FizzBuzz {
 
+    private static final int FIZZ = 3;
+    private static final int BUZZ = 5;
+
     public static String fizzbuzz(int n) {
-        if (n % 3 == 0 && n % 5 == 0) {
-            return "FizzBuzz";
-        } else if (n % 3 == 0) {
-            return "Fizz";
-        } else if (n % 5 == 0) {
-            return "Buzz";
-        } else {
-            return Integer.toString(n);
-        }
+        String resultado = fizz(n) + buzz(n);
+        return resultado.isEmpty() ? String.valueOf(n) : resultado;
     }
+
+    public static String fizz(int n) {
+        return n % FIZZ == 0 ? "Fizz" : "";
+    }
+
+    public static String buzz(int n) {
+        return n % BUZZ == 0 ? "Buzz" : "";
+    }
+
 }

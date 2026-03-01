@@ -7,7 +7,14 @@ import org.junit.jupiter.api.Test;
 class FizzBuzzTest {
     @Test
     void testFizzBuzzReturnsNumber() {
-        assertEquals("1", FizzBuzz.fizzbuzz(1));
+        // Arange
+        int input = 1;
+
+        //Act
+        String result = FizzBuzz.fizzbuzz(input);
+
+        //Assert
+        assertEquals("1", result);
     }
 
     @Test
@@ -46,7 +53,15 @@ class FizzBuzzTest {
         assertEquals("FizzBuzz", result);
     }
 
-    @Test testFizzBuzzMultiplyByOtherNumbers() {
-        assertEquals("0", FizzBuzz.fizzbuzz(0));
+    @Test
+    void testFizzBuzzWhitZero() {
+        //Arange
+        int input = 0;
+
+        //Act
+        String result = FizzBuzz.fizzbuzz(input);
+
+        //Assert
+        assertEquals("0", result);
     }
 }
