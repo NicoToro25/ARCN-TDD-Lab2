@@ -17,6 +17,46 @@ que tiene como objetivo que los estudiantes refactoricen código que viola los p
 
 ---
 
+## Estructura general del proyecto
+
+```bash
+.
+├── images
+│   ├── mvnTest.png
+│   └── repo.png
+├── pom.xml
+├── README.md
+├── src
+│   ├── main
+│   │   └── java
+│   │       └── FizzBuzz.java
+│   └── test
+│       └── java
+│           └── FizzBuzzTest.java
+└── target
+    ├── classes
+    │   └── FizzBuzz.class
+    ├── generated-sources
+    │   └── annotations
+    ├── generated-test-sources
+    │   └── test-annotations
+    ├── maven-status
+    │   └── maven-compiler-plugin
+    │       ├── compile
+    │       │   └── default-compile
+    │       │       ├── createdFiles.lst
+    │       │       └── inputFiles.lst
+    │       └── testCompile
+    │           └── default-testCompile
+    │               ├── createdFiles.lst
+    │               └── inputFiles.lst
+    └── test-classes
+        └── FizzBuzzTest.class
+```
+
+---
+
+
 ## Creación del repositorio y configuración del entorno
 
 Se creó el README.md y se configuró adecuadamente el entorno para que pueda funcionar correctamente:
@@ -26,6 +66,25 @@ Se creó el README.md y se configuró adecuadamente el entorno para que pueda fu
 
 ---
 
-## Paso 1: Escribir la primera prueba
+## Implementación
 
+Se crearon las pruebas correspondientes siguiendo la metodología de Desarrollo Guiado por Pruebas (TDD), se puede encontrar la implementación en FizzBuzz.java y FizzBuzzTest.java.
+
+![mvnTest](images/test.png)
+
+---
+
+## Refactorización
+
+Se refactorizó el código con el propósito de que se más legible.
+
+---
+
+## Pipeline CI/CD
+
+Se creó el directorio .github/workflows que contenga información para hacer un correcto CI.
+
+![.github/workflows](images/workflows.png)
+
+![ci.yml](images/ci-yml.png)
 
