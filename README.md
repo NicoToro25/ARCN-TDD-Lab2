@@ -88,6 +88,6 @@ Se creó el directorio .github/workflows que contenga información para hacer un
 
 ![ci.yml](images/ci-yml.png)
 
-Se verificó el correcto funcionamiento en Github Actions.
+Se verificó el correcto funcionamiento en Github Actions, el primer workflow correponde a CI y el segundo CD.
 
 ![pipeline](images/pipeline-funcionando.png)
