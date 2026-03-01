@@ -62,6 +62,6 @@ class FizzBuzzTest {
         String result = FizzBuzz.fizzbuzz(input);
 
         //Assert
-        assertEquals("0", result);
+        assertEquals("FizzBuzz", result);
     }
 }
